@@ -96,6 +96,9 @@ CHANNEL_LAYERS = {
     }
 }
 
+# Telegram Bot
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+
 # Password validation
 
 AUTH_PASSWORD_VALIDATORS = [

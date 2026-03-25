@@ -11,15 +11,16 @@ import os
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.development")
 
+from django.core.asgi import get_asgi_application  # noqa: E402
+
+django_asgi_app = get_asgi_application()
+
 from channels.routing import ProtocolTypeRouter, URLRouter  # noqa: E402
 from channels.security.websocket import AllowedHostsOriginValidator  # noqa: E402
-from django.core.asgi import get_asgi_application  # noqa: E402
 from django.urls import path  # noqa: E402
 
 from apps.notifications.consumers import NotificationConsumer  # noqa: E402
 from apps.notifications.middleware import JWTAuthMiddleware  # noqa: E402
-
-django_asgi_app = get_asgi_application()
 
 application = ProtocolTypeRouter(
     {
