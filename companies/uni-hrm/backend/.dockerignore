@@ -1,0 +1,12 @@
+.venv/
+.env
+.env.local
+__pycache__/
+*.pyc
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+media/
+staticfiles/

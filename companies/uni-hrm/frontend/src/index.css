@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-heading: 'Red Hat Display', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-primary-50: #EEF2FF;
+  --color-primary-100: #E0E7FF;
+  --color-primary-200: #C7D2FE;
+  --color-primary-300: #A5B4FC;
+  --color-primary-400: #818CF8;
+  --color-primary-500: #6366F1;
+  --color-primary-600: #4F46E5;
+  --color-primary-700: #4338CA;
+  --color-primary-800: #3730A3;
+  --color-primary-900: #312E81;
+  --color-primary-950: #1E1B4B;
+
+  --color-sidebar: #1E1B4B;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-900 bg-slate-50 antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+  }
+}
